@@ -8,23 +8,18 @@ namespace IocBattle.Benchmark
 		static void Main(string[] args)
 		{
 			var containers = new IContainer[]
-			                 {
-			                 	new NewContainer(),
-
-			                 	new DynamoAutoContainer(),
-
-									new AutoFacLambdaContainer(),
-									
-									new AutoFacContainer(),
-
-									new StructureMapContainer(),
-
-			                 	new UnityContainer(),
-
-									new NinjectContainer(),
-
-									new WindsorContainer(),
-			                 };
+      {
+        new NewContainer(),
+        new DynamoAutoContainer(),
+        new TinyIOCContainer(),
+        new CaliburnContainer(),
+        new AutoFacLambdaContainer(),
+        new AutoFacContainer(),
+        new StructureMapContainer(),
+        new UnityContainer(),
+        new NinjectContainer(),
+        new WindsorContainer(),
+      };
 
 			foreach (var container in containers)
 			{

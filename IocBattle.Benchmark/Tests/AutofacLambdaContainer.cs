@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using IocBattle.Benchmark.Models;
+using TinyIoC;
 
 namespace IocBattle.Benchmark.Tests
 {

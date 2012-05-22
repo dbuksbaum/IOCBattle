@@ -84,40 +84,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.2.2.4.900\lib\NET40\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.6.1.841\lib\NET40\Autofac.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
-      <HintPath>..\packages\Castle.Core.2.5.1\lib\NET35\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Facilities.Synchronize">
-      <HintPath>..\packages\Castle.Windsor.2.5.1\lib\NET40\Castle.Facilities.Synchronize.dll</HintPath>
+      <HintPath>..\packages\Castle.Core.3.0.0.4001\lib\net40-client\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor">
-      <HintPath>..\packages\Castle.Windsor.2.5.1\lib\NET40\Castle.Windsor.dll</HintPath>
+      <HintPath>..\packages\Castle.Windsor.3.0.0.4001\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="Dynamo.Ioc">
-      <HintPath>..\References\Dynamo\Dynamo.Ioc.dll</HintPath>
+      <HintPath>..\packages\Dynamo.Ioc.1.0\lib\Dynamo.Ioc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.Configuration">
-      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Interception">
-      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Interception.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
-      <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.2.1.0.76\lib\40\Ninject.dll</HintPath>
+      <HintPath>..\packages\Ninject.3.0.0.15\lib\net40\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap">
-      <HintPath>..\packages\structuremap.2.6.1.0\lib\StructureMap.dll</HintPath>
+      <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -129,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BenchEngine.cs" />
+    <Compile Include="Caliburn.Micro\ContainerExtensions.cs" />
+    <Compile Include="Caliburn.Micro\ExtensionMethods.cs" />
+    <Compile Include="Caliburn.Micro\SimpleContainer.cs" />
     <Compile Include="IContainer.cs" />
     <Compile Include="Models\AuthenticationService.cs" />
     <Compile Include="Models\Authenticator.cs" />
@@ -151,6 +149,7 @@
     <Compile Include="Tests\AutoFacContainer.cs" />
     <Compile Include="Tests\AutofacLambdaContainer.cs" />
     <Compile Include="Tests\AutofacLambdaNamedContainer.cs" />
+    <Compile Include="Tests\CaliburnContainer.cs" />
     <Compile Include="Tests\DynamoAutoContainer.cs" />
     <Compile Include="Tests\DynamoContainer.cs" />
     <Compile Include="Tests\DynamoNamedContainer.cs" />
@@ -160,8 +159,10 @@
     <Compile Include="Tests\SpringContainer.cs" />
     <Compile Include="Tests\StructureMapContainer.cs" />
     <Compile Include="Tests\StructureMapNamedContainer.cs" />
+    <Compile Include="Tests\TinyIOCContainer.cs" />
     <Compile Include="Tests\UnityContainer.cs" />
     <Compile Include="Tests\WindsorContainer.cs" />
+    <Compile Include="TinyIoC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
